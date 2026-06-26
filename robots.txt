@@ -1,0 +1,4 @@
+User-agent: *
+
+Allow: /
+Sitemap: https://somefightleft.ai/sitemap.xml
