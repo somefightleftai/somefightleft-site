@@ -28,24 +28,27 @@
     body { background: #0D0D0D; color: #F0EDE6; font-family: 'Inter', sans-serif; min-height: 100vh; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 0.5px solid rgba(240,237,230,0.1); }
     .nav-logo { display: flex; align-items: center; line-height: 0; }
+    .nav-logo img { height: 72px; width: auto; display: block; }
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { font-size: 13px; font-weight: 500; color: rgba(240,237,230,0.55); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; }
+    .nav-toggle { display: none; background: none; border: none; color: #F0EDE6; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 8px; }
+    .mobile-menu { display: none; }
     .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
     .hero-content { padding: 80px 48px 72px 32px; display: flex; flex-direction: column; justify-content: center; }
     .hero-photo { position: relative; overflow: hidden; }
     .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: grayscale(10%) contrast(1.05); }
     .hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #0D0D0D 0%, transparent 30%); }
     .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 11vw, 132px); color: #F0EDE6; line-height: 0.9; letter-spacing: 0.01em; }
-    .hero-headline em { color: #C0392B; font-style: normal; }
+    .hero-headline em { color: #FF5A2C; font-style: normal; }
     .hero-lead { font-size: 18px; line-height: 1.7; color: rgba(240,237,230,0.7); margin-top: 24px; max-width: 440px; }
-    .hero-accent { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 3.5vw, 34px); color: #C0392B; letter-spacing: 0.04em; margin-top: 16px; }
+    .hero-accent { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 3.5vw, 34px); color: #FF5A2C; letter-spacing: 0.04em; margin-top: 16px; }
     .cta-row { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
-    .btn-primary { background: #C0392B; color: #F0EDE6; border: none; padding: 14px 28px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-primary { background: #FF5A2C; color: #F0EDE6; border: none; padding: 14px 28px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; cursor: pointer; text-decoration: none; display: inline-block; }
     .btn-secondary { background: transparent; color: #F0EDE6; border: 0.5px solid rgba(240,237,230,0.35); padding: 14px 28px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; cursor: pointer; text-decoration: none; display: inline-block; }
     .divider { height: 0.5px; background: rgba(240,237,230,0.1); margin: 0 32px; }
     .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #B8953A; margin-bottom: 20px; }
     .fight-section { padding: 56px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); }
-    .fight-head { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 6vw, 48px); color: #C0392B; letter-spacing: 0.04em; margin-bottom: 16px; }
+    .fight-head { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 6vw, 48px); color: #FF5A2C; letter-spacing: 0.04em; margin-bottom: 16px; }
     .fight-text { font-size: 16px; line-height: 1.75; color: #F0EDE6; max-width: 560px; }
     .email-section { padding: 64px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); background: #0a0a0a; }
     .email-wrap { max-width: 560px; }
@@ -54,7 +57,7 @@
     .email-form { display: flex; gap: 0; max-width: 480px; }
     .email-input { flex: 1; padding: 14px 20px; background: #161616; border: 0.5px solid rgba(240,237,230,0.2); color: #F0EDE6; font-family: 'Inter', sans-serif; font-size: 15px; outline: none; }
     .email-input::placeholder { color: rgba(240,237,230,0.3); }
-    .email-btn { background: #C0392B; color: #F0EDE6; border: none; padding: 14px 24px; font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; cursor: pointer; white-space: nowrap; }
+    .email-btn { background: #FF5A2C; color: #F0EDE6; border: none; padding: 14px 24px; font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; cursor: pointer; white-space: nowrap; }
     .email-note { font-size: 12px; color: rgba(240,237,230,0.3); margin-top: 12px; }
     .about { padding: 64px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
     .about-headshot { flex: 0 0 auto; width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(240,237,230,0.1); }
@@ -66,6 +69,14 @@
     .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: rgba(240,237,230,0.35); }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 12px; color: rgba(240,237,230,0.35); letter-spacing: 0.08em; text-decoration: none; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .nav-logo img { height: 56px; }
+      .mobile-menu { flex-direction: column; gap: 4px; padding: 8px 32px 18px; border-bottom: 0.5px solid rgba(240,237,230,0.1); background: #0D0D0D; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { font-size: 14px; font-weight: 500; color: rgba(240,237,230,0.7); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 0; }
+    }
     @media (max-width: 640px) {
       .hero { grid-template-columns: 1fr; display: flex; flex-direction: column; }
       .hero-photo { height: 100vw; order: 0; width: 100%; }
@@ -96,7 +107,7 @@
 
 <nav>
   <div class="nav-logo">
-    <img src="/logo-patch.png" alt="Some Fight Left" style="height:72px; width:auto; display:block;">
+    <img src="/logo-patch.png" alt="Some Fight Left">
   </div>
   <div class="nav-links">
     <a href="#story">Story</a>
@@ -104,7 +115,14 @@
     <a href="#signup">Join</a>
     <a href="#about">About</a>
   </div>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()">☰</button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#story" onclick="closeMenu()">Story</a>
+  <a href="#content" onclick="closeMenu()">Content</a>
+  <a href="#signup" onclick="closeMenu()">Join</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+</div>
 
 <section class="hero">
   <div class="hero-content">
@@ -138,9 +156,12 @@
 
 <section class="email-section" id="signup">
   <div class="email-wrap">
-    <div class="eyebrow">The Newsletter</div>
-    <div class="email-headline">Get the fight delivered weekly.</div>
-    <p class="email-sub">Training notes, longevity, mindset, and the unfiltered truth about what it actually takes to stay in the fight. No fluff. No excuses.</p>
+    <div class="eyebrow">Join The Fight</div>
+    <div class="email-headline">Follow the fight.</div>
+    <div class="cta-row" style="margin-top: 0; margin-bottom: 28px;">
+      <a href="https://instagram.com/somefightleft" target="_blank" rel="noopener" class="btn-primary">Follow on Instagram ↗</a>
+    </div>
+    <p class="email-sub" style="margin-bottom: 16px;">Or get the occasional drop straight to your inbox. No spam. No schedule.</p>
     <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="b2477a41-bd4c-4ba8-bd16-d991065bc327"></script>
   </div>
 </section>
@@ -162,6 +183,21 @@
     <a href="https://instagram.com/somefightleft">@somefightleft</a>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var btn = document.querySelector('.nav-toggle');
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var btn = document.querySelector('.nav-toggle');
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+</script>
 
 </body>
 </html>
