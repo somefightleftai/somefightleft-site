@@ -1,300 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/favF_180.png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Some Fight Left — Defy Numbers</title>
-  <meta name="description" content="Some Fight Left. Michael Weiner — 62, four decades of karate, yoga, and jiu-jitsu. Combat sports, longevity, and the wisdom of the fight. Still training. Still a student." />
-  <meta name="robots" content="index, follow" />
-  <meta name="google-site-verification" content="Ax9HQ-uhFqVHFp2fiofoj1VDnL9ezBodDXywfLhJXGM" />
-  <link rel="canonical" href="https://somefightleft.ai/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Some Fight Left" />
-  <meta property="og:title" content="Some Fight Left — Defy " />
-  <meta property="og:description" content="Four decades of karate, yoga, and jiu-jitsu. Combat sports, longevity, and the wisdom of the fight." />
-  <meta property="og:url" content="https://somefightleft.ai/" />
-  <meta property="og:image" content="https://somefightleft.ai/hero.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Some Fight Left — Defy Numbers" />
-   <meta name="twitter:description" content="Four decades of karate, yoga, and jiu-jitsu. Combat sports, longevity, and the wisdom of the fight." />
-  <meta name="twitter:image" content="https://somefightleft.ai/hero.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0D0D0D; color: #F0EDE6; font-family: 'Inter', sans-serif; min-height: 100vh; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 0.5px solid rgba(240,237,230,0.1); }
-    .nav-logo { display: flex; align-items: center; line-height: 0; }
-    .nav-logo img { height: 72px; width: auto; display: block; }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a { font-size: 13px; font-weight: 500; color: rgba(240,237,230,0.55); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; }
-    .nav-toggle { display: none; background: none; border: none; color: #F0EDE6; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 8px; }
-    .mobile-menu { display: none; }
-    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 82vh; }
-    .hero-content { padding: 80px 48px 72px 32px; display: flex; flex-direction: column; justify-content: center; }
-    .hero-photo { position: relative; overflow: hidden; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: grayscale(10%) contrast(1.05); }
-    .hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #0D0D0D 0%, transparent 30%); }
-    .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 11vw, 132px); color: #F0EDE6; line-height: 0.9; letter-spacing: 0.01em; }
-    .hero-headline em { color: #FF5A2C; font-style: normal; }
-    .hero-lead { font-size: 18px; line-height: 1.7; color: rgba(240,237,230,0.7); margin-top: 24px; max-width: 460px; }
-    .hero-accent { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 3.5vw, 34px); color: #FF5A2C; letter-spacing: 0.04em; margin-top: 16px; }
-    .cta-row { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
-    .btn-primary { background: #FF5A2C; color: #F0EDE6; border: none; padding: 14px 28px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; cursor: pointer; text-decoration: none; display: inline-block; }
-    .btn-secondary { background: transparent; color: #F0EDE6; border: 0.5px solid rgba(240,237,230,0.35); padding: 14px 28px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; cursor: pointer; text-decoration: none; display: inline-block; }
-    .divider { height: 0.5px; background: rgba(240,237,230,0.1); margin: 0 32px; }
-    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #B8953A; margin-bottom: 20px; }
-
-    /* WHAT I DO */
-    .doing { padding: 72px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); }
-    .section-head { font-family: 'Bebas Neue', sans-serif; font-size: clamp(34px, 6vw, 56px); color: #F0EDE6; letter-spacing: 0.03em; margin-bottom: 12px; }
-    .section-intro { font-size: 16px; line-height: 1.75; color: rgba(240,237,230,0.6); max-width: 620px; margin-bottom: 36px; }
-    .anchor-line { font-family: 'Bebas Neue', sans-serif; font-size: clamp(30px, 5vw, 46px); color: #FF5A2C; letter-spacing: 0.03em; margin-bottom: 8px; }
-    .anchor-sub { font-size: 15px; line-height: 1.7; color: rgba(240,237,230,0.6); max-width: 560px; margin-bottom: 40px; }
-    .rotation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 760px; margin-bottom: 40px; }
-    .rotation-block .rot-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #B8953A; margin-bottom: 12px; }
-    .rotation-block ul { list-style: none; }
-    .rotation-block li { font-size: 16px; line-height: 1.9; color: #F0EDE6; }
-    .doing-close { font-size: 16px; line-height: 1.75; color: rgba(240,237,230,0.7); max-width: 620px; border-left: 2px solid #FF5A2C; padding-left: 20px; }
-
-    /* PHILOSOPHY */
-    .philosophy { padding: 72px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); background: #0a0a0a; }
-    .phil-body { font-size: 16px; line-height: 1.8; color: rgba(240,237,230,0.72); max-width: 640px; margin-bottom: 20px; }
-    .phil-body strong { color: #F0EDE6; font-weight: 600; }
-    .pull-quotes { margin-top: 44px; display: flex; flex-direction: column; gap: 32px; max-width: 680px; }
-    .pull-quote { border-left: 2px solid #FF5A2C; padding-left: 22px; }
-    .pull-quote .pq-head { font-family: 'Bebas Neue', sans-serif; font-size: clamp(24px, 4vw, 34px); color: #FF5A2C; letter-spacing: 0.03em; margin-bottom: 8px; }
-    .pull-quote .pq-text { font-size: 15px; line-height: 1.7; color: rgba(240,237,230,0.65); }
-
-    /* EMAIL / FOLLOW */
-    .email-section { padding: 64px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); }
-    .email-wrap { max-width: 560px; }
-    .email-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 5vw, 48px); color: #F0EDE6; letter-spacing: 0.04em; margin-bottom: 12px; }
-    .email-sub { font-size: 15px; line-height: 1.7; color: rgba(240,237,230,0.6); margin-bottom: 28px; }
-    .email-note { font-size: 12px; color: rgba(240,237,230,0.3); margin-top: 12px; }
-
-    /* GEAR */
-    .gear { padding: 72px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); background: #0a0a0a; }
-    .gear-lines { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 720px; margin: 28px 0 36px; }
-    .gear-line { border: 0.5px solid rgba(240,237,230,0.14); padding: 26px 24px; }
-    .gear-line .gl-name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.05em; color: #FF5A2C; margin-bottom: 8px; }
-    .gear-line .gl-desc { font-size: 14px; line-height: 1.65; color: rgba(240,237,230,0.6); }
-
-    /* ABOUT */
-    .about { padding: 64px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
-    .about-headshot { flex: 0 0 auto; width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(240,237,230,0.1); }
-    .about-headshot img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(10%); }
-    .about-content { flex: 1; min-width: 220px; }
-    .about-headline { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #F0EDE6; letter-spacing: 0.04em; margin-bottom: 14px; }
-    .about-body { font-size: 15px; line-height: 1.75; color: rgba(240,237,230,0.6); max-width: 620px; }
-
-    /* CLOSER */
-    .closer { padding: 80px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); text-align: center; }
-    .closer-line { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 8vw, 90px); color: #FF5A2C; letter-spacing: 0.03em; line-height: 1; }
-
-    footer { padding: 28px 32px; border-top: 0.5px solid rgba(240,237,230,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: rgba(240,237,230,0.35); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 12px; color: rgba(240,237,230,0.35); letter-spacing: 0.08em; text-decoration: none; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-toggle { display: block; }
-      .nav-logo img { height: 30px; }
-      .mobile-menu { flex-direction: column; gap: 4px; padding: 8px 32px 18px; border-bottom: 0.5px solid rgba(240,237,230,0.1); background: #0D0D0D; }
-      .mobile-menu.open { display: flex; }
-      .mobile-menu a { font-size: 14px; font-weight: 500; color: rgba(240,237,230,0.7); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 0; }
-    }
-    @media (max-width: 640px) {
-      .hero { grid-template-columns: 1fr; display: flex; flex-direction: column; }
-      .hero-photo { height: 100vw; order: 0; width: 100%; }
-      .hero-photo::after { background: linear-gradient(to bottom, transparent 70%, #0D0D0D 100%); }
-      .hero-content { order: 1; padding: 28px 20px 48px; }
-      .hero-headline { font-size: 56px; }
-      nav { padding: 16px 20px; }
-      .doing, .philosophy, .email-section, .gear, .about, .closer { padding-left: 20px; padding-right: 20px; }
-      .rotation-grid { grid-template-columns: 1fr; gap: 22px; }
-      .gear-lines { grid-template-columns: 1fr; }
-      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-      .about-headshot { width: 100px; height: 100px; }
-    }
-
-    /* Beehiiv form override */
-    #beehiiv-embed-outer-div { background: transparent !important; border: none !important; box-shadow: none !important; }
-    #beehiiv-embed-inner-div { background: transparent !important; border: none !important; }
-    .beehiiv-form-container { background: transparent !important; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENFIGHTEN — Every day's a battle. Fight the decay.</title>
+<meta name="description" content="You can't stop it. You can fight it. Every day's a battle. 40 years of martial arts. 62 and still training. 1-on-1 coaching. Become Enfightened.">
+<meta property="og:title" content="ENFIGHTEN — Every day's a battle. Fight the decay.">
+<meta property="og:description" content="You can't stop it. You can fight it. 62 and still training.">
+<meta property="og:image" content="/site_coin_gold.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/site_favicon.png">
+<link rel="apple-touch-icon" href="/site_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --gold:#FFCC00; --red:#C40C00; --black:#0D0D0D; --ink:#f5f5f5; --muted:#9a9a9a; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(13,13,13,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1e1e1e}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  nav .brand{display:flex;align-items:center}
+  nav .brand .brandimg{height:26px;width:auto;display:block}
+  nav .links{display:flex;gap:22px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+  nav .links a:hover{color:var(--gold)}
+  .btn{display:inline-block;background:var(--gold);color:var(--black);font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:14px 30px;border-radius:6px;font-size:14px;transition:transform .12s,box-shadow .12s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,204,0,.25)}
+  .btn-ghost{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+  .btn-ghost:hover{background:var(--gold);color:var(--black)}
+  header.hero{text-align:center;padding:70px 0 90px}
+  header.hero .coinwrap{width:min(320px,72vw);margin:0 auto;filter:drop-shadow(0 10px 40px rgba(0,0,0,.6))}
+  header.hero video.coin,header.hero img.coin{width:100%;height:auto;display:block;border-radius:50%}
+  header.hero .pillars{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,7vw,58px);letter-spacing:1px;margin-top:28px;color:var(--gold);line-height:1}
+  header.hero p.sub{font-size:clamp(17px,2.6vw,22px);color:var(--ink);margin-top:16px;font-weight:700}
+  header.hero p.tag{color:var(--muted);margin-top:8px;font-size:15px}
+  header.hero .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  section{padding:70px 0;border-top:1px solid #1a1a1a}
+  .eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:3px;color:var(--red);font-size:18px;text-transform:uppercase}
+  h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,48px);letter-spacing:1px;margin:6px 0 20px;line-height:1.05}
+  .story p{font-size:17px;color:#d6d6d6;max-width:720px;margin-bottom:16px}
+  .story .kicker{color:var(--gold);font-weight:600}
+  .coach{text-align:center;background:linear-gradient(180deg,#151515,#0d0d0d)}
+  .coach p{font-size:17px;color:#d6d6d6;max-width:620px;margin:0 auto 28px}
+  .email-wrap{text-align:center;max-width:560px;margin:0 auto}
+  .email-wrap iframe{width:100%!important;max-width:100%;border:none;background:transparent}
+  footer{border-top:1px solid #1a1a1a;padding:48px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer .social{display:flex;gap:22px;justify-content:center;margin-bottom:18px}
+  footer .social a{font-weight:600;text-transform:uppercase;letter-spacing:.5px;font-size:13px}
+  footer .social a:hover{color:var(--gold)}
+  footer .mark{margin-bottom:10px}
+</style>
 </head>
 <body>
-
 <nav>
-  <div class="nav-logo">
-    <img src="/SECONDARY_horizontal_transparent.png" alt="Some Fight Left">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="/site_wordmark_gold.png" alt="ENFIGHTEN" class="brandimg"></a>
+    <div class="links">
+      <a href="#story">Story</a>
+      <a href="#coach">Train</a>
+      <a href="https://shop.enfighten.com" target="_blank" rel="noopener">Shop</a>
+      <a href="https://instagram.com/enfighten" target="_blank" rel="noopener">Follow</a>
+    </div>
   </div>
-  <div class="nav-links">
-    <a href="#doing">The Week</a>
-    <a href="#philosophy">The Why</a>
-    <a href="#fight">The Fight</a>
-    <a href="#gear">Gear</a>
-    <a href="#signup">Follow</a>
-  </div>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()">☰</button>
 </nav>
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#doing" onclick="closeMenu()">The Week</a>
-  <a href="#philosophy" onclick="closeMenu()">The Why</a>
-  <a href="#fight" onclick="closeMenu()">The Fight</a>
-  <a href="#gear" onclick="closeMenu()">Gear</a>
-  <a href="#signup" onclick="closeMenu()">Follow</a>
-</div>
-
-<section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Some Fight Left</div>
-    <h1  class="hero-headline"><em>Defy numbers.</em></h1>
-    <p class="hero-lead">I'm usually the oldest guy in the room. Some days I'm kicking butt, some days I'm getting my butt kicked. Doesn't really matter if you're the nail or the hammer — you just gotta show up. Either way, I'm on the mat.</p>
-    <div class="cta-row">
-      <a href="https://instagram.com/somefightleft" class="btn-primary">Follow The Fight ↗</a>
-      <a href="https://shop.somefightleft.ai" class="btn-secondary">Shop Gear</a>
+<a id="top"></a>
+<header class="hero">
+  <div class="wrap">
+    <div class="coinwrap">
+      <video class="coin" autoplay loop muted playsinline poster="/site_coin_gold.png">
+        <source src="/ENFIGHTEN_FIGHT_SWEEP.mp4" type="video/mp4">
+        <img class="coin" src="/site_coin_gold.png" alt="ENFIGHTEN">
+      </video>
+    </div>
+    <div class="pillars">Every day&rsquo;s a battle.<br>Fight the decay.</div>
+    <p class="sub">You can&rsquo;t stop it. You can fight it.</p>
+    <p class="tag">40 years on the mat. 62 and still training.</p>
+    <div class="cta">
+      <a class="btn" href="https://shop.enfighten.com" target="_blank" rel="noopener">Shop</a>
+      <a class="btn btn-ghost" href="#coach">Train with me</a>
     </div>
   </div>
-  <div class="hero-photo">
-    <img src="hero.jpg" alt="Michael at 62" />
+</header>
+<section id="story">
+  <div class="wrap story">
+    <div class="eyebrow">What it stands for</div>
+    <h2>Become Enfightened.</h2>
+    <p>Skip a few days and you feel it. The body starts breaking down &mdash; skin, eyes, everything goes soft and watery. That&rsquo;s the decay, and it never stops coming. You&rsquo;re sliding down a hill. You can&rsquo;t stop the slide. But you can claw against it &mdash; slow it down, and some days even climb back up.</p>
+    <p><span class="kicker">Enfighten</span> is what you become by fighting it. Forty years of martial arts &mdash; karate, jiu-jitsu &mdash; forty years of yoga. Not grinding blind: showing up smart, reading your own body, hard days and easy days. That&rsquo;s the part four decades teach you. More good years. A longer healthspan. Earned, daily.</p>
+    <p>I&rsquo;m 62 and I still train every day. Karate, jiu-jitsu, yoga, BMX. The hill wins eventually. <span class="kicker">Not today. Fight the decay.</span></p>
   </div>
 </section>
-
-<section class="doing" id="doing">
-  <div class="eyebrow">What I Do</div>
-  <h2 class="section-head">This is the week.</h2>
-  <p class="section-intro">No perfect schedule. Full-time job. Kids. Life moves things around. But one thing never moves:</p>
-
-  <div class="anchor-line">4 a.m. Yoga. Every day.</div>
-  <p class="anchor-sub">Started it the same year I started karate — Iyengar, back then. Forty years later the practice has changed but the hour hasn't: still the first thing I do, before the world wakes up.</p>
-
-  <div class="rotation-grid">
-    <div class="rotation-block">
-      <div class="rot-label">Then it rotates</div>
-      <ul>
-        <li>Strength &amp; conditioning</li>
-        <li>Rock climbing</li>
-        <li>Karate</li>
-      </ul>
-    </div>
-    <div class="rotation-block">
-      <div class="rot-label">Across the week</div>
-      <ul>
-        <li>Jiu-jitsu</li>
-        <li>Muay Thai</li>
-      </ul>
-    </div>
-    <div class="rotation-block">
-      <div class="rot-label">Weekends</div>
-      <ul>
-        <li>BMX with my boys</li>
-      </ul>
-    </div>
-  </div>
-
-  <p class="doing-close">People ask how. The answer's boring: I show up. Win, lose, sore, tired — I show up. Stop showing up and it's over, and you won't even feel it happen. That's the whole thing. There's no second secret.</p>
-</section>
-
-<section class="philosophy" id="philosophy">
-  <div class="eyebrow">The Why</div>
-  <h2 class="section-head">The body isn't what quits first.</h2>
-
-  <p class="phil-body">The will goes first. The body just follows orders. Somewhere in their fifties most people decide the good part of their life is behind them — and the body says fine, and starts packing up. I never gave the order. That's the whole difference between me and the guy my age on the couch.</p>
-
-  <p class="phil-body">Four decades on the floor — karate under Nishiyama, jiu-jitsu under Danaher, yoga since the same year I started throwing punches. I'm not telling you that to impress you. I'm telling you it still works at 62.</p>
-
-  <div class="pull-quotes">
-    <div class="pull-quote">
-      <div class="pq-head">The true opponent is yourself.</div>
-      <div class="pq-text">Master yourself before you try to master anyone else. That's why age doesn't retire you — the fight with your own limits never ends.</div>
-    </div>
+<section id="coach" class="coach">
+  <div class="wrap">
+    <div class="eyebrow">Work with me</div>
+    <h2>Train with me.</h2>
+    <p>I coach a small number of people one-on-one &mdash; movement, longevity, and the fight that keeps you sharp at any age. Four decades of karate, jiu-jitsu, and yoga, distilled for your body and your life. If you&rsquo;re serious about fighting the decay, reach out.</p>
+    <a class="btn" href="mailto:hello@enfighten.com?subject=Coaching%20with%20Enfighten" style="font-size:16px;padding:18px 44px">Email me &rarr;</a>
   </div>
 </section>
-
-<section class="philosophy" id="fight">
-  <div class="eyebrow">The Real Fight</div>
-  <h2 class="section-head">The fight goes first.</h2>
-  <p class="anchor-sub" style="color: #FF5A2C; font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 3.5vw, 30px); letter-spacing: 0.03em; margin-bottom: 32px;">Lose it and you won't even notice. That's the danger.</p>
-
-  <p class="phil-body">I've watched it happen to sharp people. Not the work wearing them down — the coasting. The slow settling. It smooths you out, rewards going along, until the part of you that pushed back just goes quiet. And most people never feel it leave.</p>
-
-  <p class="phil-body">That's the real fight — not the guy across from me. The one to stay awake. To keep generating instead of coasting. To still be in the room when everyone my age has left it.</p>
-
-  <p class="phil-body">I stopped reading the philosophy two decades ago because I was living in other people's heads. Made my own body and mind the experiment instead. Sensei told me: <em>I give you good food — you must digest it yourself.</em> So I did. Still do. 62, still on the mat, still figuring it out.</p>
-
-  <p class="phil-body" style="color: #F0EDE6; font-weight: 500;">Keep your fight. It's not a metaphor — it's what's keeping you alive. Defy the number. Some fight left, baby.</p>
-</section>
-
-<section class="email-section" id="signup">
-  <div class="email-wrap">
-    <div class="email-headline">Follow the fight.</div>
-    <div class="cta-row" style="margin-top: 0; margin-bottom: 28px;">
-      <a href="https://instagram.com/somefightleft" target="_blank" rel="noopener" class="btn-primary">Follow on Instagram ↗</a>
-    </div>
-    <p class="email-sub" style="margin-bottom: 16px;">Or get the occasional drop straight to your inbox. No spam. No schedule.</p>
-    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="b2477a41-bd4c-4ba8-bd16-d991065bc327"></script>
+<section id="shop">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">The gear</div>
+    <h2>Get the gear.</h2>
+    <p style="color:#bbb;max-width:600px;margin:0 auto 34px">Tees, caps, stickers &mdash; all on black. Wear it. Fight the decay.</p>
+    <a class="btn" href="https://shop.enfighten.com" target="_blank" rel="noopener" style="font-size:18px;padding:20px 54px">Shop the store &rarr;</a>
   </div>
 </section>
-
-<section class="gear" id="gear">
-  <div class="eyebrow">Gear</div>
-  <h2 class="section-head">Wear it.</h2>
-  <div class="gear-lines">
-    <div class="gear-line">
-      <div class="gl-name">Some Fight Left</div>
-      <div class="gl-desc">The brand, on your chest. Defy numbers — for anyone still in the room.</div>
-    </div>
-    <div class="gear-line">
-      <div class="gl-name">Enfighten</div>
-      <div class="gl-desc">Fighting wisdom. The lines I live by.</div>
-    </div>
+<section id="email">
+  <div class="wrap email-wrap">
+    <div class="eyebrow">Stay in it</div>
+    <h2>Fight the decay.</h2>
+    <p style="color:#bbb;margin-bottom:24px">Wisdom from the mat, new drops, and what 40 years taught me. No fluff.</p>
+    <iframe src="https://embeds.beehiiv.com/f883cfed-92c8-4cfd-85f0-13badbfa1c27?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin:0;border-radius:0;background:transparent"></iframe>
   </div>
-  <a href="https://shop.somefightleft.ai" class="btn-primary">Shop the Gear ↗</a>
 </section>
-
-<section class="about" id="about">
-  <div class="about-headshot">
-    <img src="headshot.png" alt="Michael" />
-  </div>
-  <div class="about-content">
-    <div class="about-headline">Who's Behind This</div>
-I'm Michael. My whole week is training. Karate, yoga, jiu-jitsu, Muay Thai, MMA, BMX — usually the oldest guy on the mat, some days the one getting smashed.  </div>
-</section>
-
-<section class="closer"
-  <div class="closer-line">Some Fight Left, Baby.</div>
-</section>
-
 <footer>
-  <div class="footer-logo">SOME FIGHT LEFT</div>
-  <div class="footer-links">
-    <a href="https://somefightleft.ai">somefightleft.ai</a>
-    <a href="https://instagram.com/somefightleft">@somefightleft</a>
+  <div class="wrap">
+    <div class="mark"><img src="/site_wordmark_gold.png" alt="ENFIGHTEN" style="height:30px;width:auto"></div>
+    <div class="social">
+      <a href="https://instagram.com/enfighten" target="_blank" rel="noopener">Instagram</a>
+      <a href="#coach">Train</a>
+      <a href="https://shop.enfighten.com" target="_blank" rel="noopener">Shop</a>
+      <a href="https://youtube.com/@enfighten" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <div>Every day&rsquo;s a battle. Fight the decay. &nbsp;|&nbsp; Stay Enfighten.</div>
+    <div style="margin-top:8px;color:#555;font-size:12px">&copy; 2026 Enfighten</div>
   </div>
 </footer>
-
-<script>
-  function toggleMenu() {
-    var menu = document.getElementById('mobile-menu');
-    var btn = document.querySelector('.nav-toggle');
-    var open = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-  function closeMenu() {
-    var menu = document.getElementById('mobile-menu');
-    var btn = document.querySelector('.nav-toggle');
-    menu.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-  }
-</script>
-
 </body>
 </html>
